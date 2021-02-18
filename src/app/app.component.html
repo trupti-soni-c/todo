@@ -1,0 +1,106 @@
+<div class="content" role="main"></div>
+   
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+    <img width="40" alt="Todo Logo"src="/assets/first.jpg"/>
+    <span>Todo List Cards</span>
+    <input type="hidden" #selection>
+    <div class="card card-small" (click)="addNewCard()" tabindex="0">
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+        <span>Add New Card &nbsp;</span>
+    </div>
+</div>
+<div class="row">
+    <div class="column" *ngFor="let i of list">
+        <div class="container" >    
+            <div class="header" >
+                <div class="list">
+                    <div class="card card-small" style="text-align: justify;">
+                        <app-todos></app-todos> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+
+
+
+<!-- <div class="container" >    
+    <div class="header"  [ngSwitch]="selection.value">
+        <div class="list" >
+            <app-todos></app-todos> 
+            
+            <span *ngSwitchCase="'material'"><app-todos></app-todos> </span>
+        </div>
+    </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Toolbar -->
+                     <!--<div class="toolbar" role="banner">
+                   
+                    <span>Todo List</span>
+                        <div class="spacer"></div>
+                        <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="" >
+                            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+                        </a>
+                        <button class="btn btn-primary" (click)="onaddcard()">add card</button>
+                        <ul class="list-group">
+                            <li class="list-group-item"
+                                *ngFor="let newcard of newcards;let i = index"
+                                >{{newcard}}
+                            </li>
+                        </ul> 
+                    </div>-->
+   
+               
+<!--
+                    <div class="toolbar" role="banner">
+                   
+                        <span>Todo List</span>
+                            <div class="spacer"></div>
+                            <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="" >
+                                <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+                            </a>
+                    <div class="content" role="main">
+                        <div class="card-container">
+                            <app-todos></app-todos>          
+                        </div>
+                      </div>
+                         -->
+                    <!-- <div class="content" role="main">
+                      <div class="card-container">
+                                  <div class="card">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-lg-3">
+                                          
+                                        </div>
+                                    </div>
+                                </div> 
+                          <app-todos></app-todos>          
+                        </div>
+                      </div>
+                         </div> -->
+                        
+                      <!-- </div> -->
+                        <!-- <div class="card-container">
+                            
+                                <app-todos></app-todos>
+                            </div>
+
+                    </div> -->
+    

@@ -1,0 +1,17 @@
+
+            <div class="header" ><h1>Todo App</h1></div>
+            <form (submit)="addTodo()">
+                <input type="text"  class="todo-input" placeholder="Enter todo.." name="inputTodo" [(ngModel)]="inputTodo"/>
+            </form>
+            <div *ngFor="let todo of todos;let i=index;"  class="todo {{ (todo.completed ? 'done' : '') }}" >  
+                <div class="id">
+                    <input type="checkbox"  (change)="toggleDone(i)" >    
+                </div>
+                <div class="content" >{{ todo.content }}</div>
+                 <button class="delete" (click)="deleteTodo(i)">X</button>   
+            </div>   
+           
+           
+                
+
+

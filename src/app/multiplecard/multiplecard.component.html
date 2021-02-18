@@ -1,0 +1,19 @@
+    
+        <div class="card card-small" style="text-align: justify;">
+            <div class="header" ><h1>Todo App</h1></div>
+            <form (submit)="submitTodo()">
+                <input type="text"  class="todo-input" placeholder="List the Todolist..." name="contentTodo" [(ngModel)]="contentTodo"/>
+            </form>
+            <div *ngFor="let t of lists;let i=index;"  class="todo {{ (t.completed ? 'done' : '') }}">  
+                <div class="id">
+                    <input type="checkbox"  (change)="toggleDone(i)">    
+                </div>
+                <div class="content" >{{ t.content }}</div>
+                <button class="delete" (click)="deleteTodo(i)">X</button>
+            </div>   
+            
+        </div>
+    
+    
+
+
